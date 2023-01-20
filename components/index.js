@@ -1,6 +1,7 @@
 import Logo from "./Logo";
-import TextInput from "./Input";
+import { RecInput } from "./Input";
+import { MainButton } from "./Button";
 
 export {
-    Logo, TextInput,
+    Logo, RecInput, MainButton,
 };

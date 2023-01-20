@@ -1,24 +1,26 @@
 import React from 'react';
 import { useState } from 'react';
-import { Image, StyleSheet, View, Text, SafeAreaView, Button } from 'react-native';
+import { Image, StyleSheet, View, Text, SafeAreaView } from 'react-native';
 
-import { assets, COLORS, SIZE, SHADOWS, FONTS } from '../constants';
-import { TextInput, Logo } from '../components';
+import { assets, COLORS, SIZE, FONTS } from '../constants';
+import { Logo, RecInput, MainButton } from '../components';
 
 const Login = () => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.layout}>
-        <Text style={styles.header}>Welcome!</Text>
-        <Text style={styles.subheader}>Please login</Text>
-        <View style={styles.inputs}>
-          <TextInput />
-          <TextInput />
-          <Button title='Login' />
+        <View style={styles.headercontainer}>
+          <Text style={styles.header}>Welcome!</Text>
+          <Text style={[styles.header, {fontFamily: FONTS.regular}]}>Please login</Text>
+        </View>
+        <View style={styles.inputcontainer}>
+          <RecInput label="Email" />
+          <RecInput label='Password' />
+          <MainButton name='Login' />
         </View>
         <View style={styles.container}>
           <Text style={styles.text}>Don't have an account?</Text>
-          <Text style={styles.text}>Create one here</Text>
+          <Text style={[styles.text, {paddingLeft: 5, color: COLORS.brown400}]}>Create one here</Text>
         </View>
         <View style={styles.logo}>
           <Logo />
@@ -56,26 +58,31 @@ const styles = StyleSheet.create({
     height: 318,
     width: 300,
   },
+  headercontainer: {
+    flex: 1,
+  },
   header: {
     color: COLORS.white100,
     fontFamily: FONTS.bold,
     fontSize: SIZE.heading,
-  },
-  subheader: {
-    color: COLORS.white100,
-    fontFamily: FONTS.regular,
-    fontSize: SIZE.heading,
-    marginBottom: 20,
   },
   text: {
     fontFamily: FONTS.regular,
     fontSize: SIZE.small,
     color: COLORS.white100,
   },
-  inputs: {
-    flex: 2,
+  inputcontainer: {
+    flex: 3,
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
+  },
+  inputs : {
+    height: 45,
+    width: 280,
+    borderWidth: 2,
+    borderColor: COLORS.brown200,
+    borderRadius: 7,
+    backgroundColor: COLORS.white200,
   },
   container: {
     flex: 1,

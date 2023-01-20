@@ -38,11 +38,11 @@ export const SHADOWS = {
     shadow01: {
         shadowColor: '#000000',
         shadowOffset: {
-            width: 2,
+            width: 1,
             height: 3,
         },
-        shadowOpacity: 0.20,
-        shadowRadius: 4,
+        shadowOpacity: 0.25,
+        shadowRadius: 3,
 
         elevation: 1,
     },
