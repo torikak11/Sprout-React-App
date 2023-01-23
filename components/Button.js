@@ -7,11 +7,14 @@ export const MainButton = (props) => {
   return (
     <Pressable style={{
         backgroundColor: COLORS.black,
+        color: COLORS.white100,
         paddingVertical: 10,
         paddingHorizontal: 100,
         borderRadius: 20,
         ...SHADOWS.shadow01,
-        }}>
+        }}
+        onPress={props.onPress}    
+    >
         <Text style={{
             fontFamily: FONTS.medium, 
             fontSize: SIZE.body, 

@@ -1,11 +1,15 @@
-import React from 'react';
-import { useState } from 'react';
+import { React, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Image, StyleSheet, View, Text, SafeAreaView } from 'react-native';
 
 import { assets, COLORS, SIZE, FONTS } from '../constants';
 import { Logo, RecInput, MainButton } from '../components';
 
 const Login = () => {
+  const nav = useNavigation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.layout}>
@@ -14,13 +18,28 @@ const Login = () => {
           <Text style={[styles.header, {fontFamily: FONTS.regular}]}>Please login</Text>
         </View>
         <View style={styles.inputcontainer}>
-          <RecInput label="Email" />
-          <RecInput label='Password' />
-          <MainButton name='Login' />
+          <RecInput 
+            label="Email" 
+            onChangeText={loginEmail => setEmail(loginEmail)}
+            value={email} 
+          />
+          <RecInput 
+            label='Password' 
+            onChangeText={loginPassword => setPassword(loginPassword)}
+            value={password} 
+          />
+          <MainButton 
+            name='Login' 
+            onPress={() => nav.navigate('Home')} 
+          />
         </View>
         <View style={styles.container}>
           <Text style={styles.text}>Don't have an account?</Text>
-          <Text style={[styles.text, {paddingLeft: 5, color: COLORS.brown400}]}>Create one here</Text>
+          <Text 
+            style={[styles.text, {paddingLeft: 5, color: COLORS.brown400}]}
+            onPress={() => nav.navigate('Register')}>
+            Create one here
+          </Text>
         </View>
         <View style={styles.logo}>
           <Logo />
@@ -56,7 +75,7 @@ const styles = StyleSheet.create({
   lines: {
     flex: 1,
     height: 318,
-    width: 300,
+    width: 320,
   },
   headercontainer: {
     flex: 1,
@@ -75,14 +94,6 @@ const styles = StyleSheet.create({
     flex: 3,
     alignItems: 'center',
     justifyContent: 'space-evenly',
-  },
-  inputs : {
-    height: 45,
-    width: 280,
-    borderWidth: 2,
-    borderColor: COLORS.brown200,
-    borderRadius: 7,
-    backgroundColor: COLORS.white200,
   },
   container: {
     flex: 1,

@@ -18,12 +18,12 @@ export const COLORS = {
 };
 
 export const SIZE = {
-    heading: 24,
-    heading02: 20,
+    heading: 28,
+    heading02: 22,
     subheading: 18,
     body: 16,
-    small: 12,
-    span: 8,
+    small: 14,
+    span: 10,
 };
 
 export const FONTS = {
@@ -41,9 +41,9 @@ export const SHADOWS = {
             width: 1,
             height: 3,
         },
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.30,
         shadowRadius: 3,
 
-        elevation: 1,
+        elevation: 5,
     },
 };
