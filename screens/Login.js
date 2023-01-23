@@ -36,7 +36,7 @@ const Login = () => {
         <View style={styles.container}>
           <Text style={styles.text}>Don't have an account?</Text>
           <Text 
-            style={[styles.text, {paddingLeft: 5, color: COLORS.brown400}]}
+            style={[styles.text, {paddingLeft: 5, color: COLORS.coral200}]}
             onPress={() => nav.navigate('Register')}>
             Create one here
           </Text>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     margin: 40,
   },
   background: {
-    backgroundColor: COLORS.brown100,
+    backgroundColor: COLORS.white200,
     position: 'absolute',
     top: 0,
     bottom: 0,
@@ -74,21 +74,21 @@ const styles = StyleSheet.create({
   },
   lines: {
     flex: 1,
-    height: 318,
-    width: 320,
+    height: 300,
+    width: 300,
   },
   headercontainer: {
     flex: 1,
   },
   header: {
-    color: COLORS.white100,
+    color: COLORS.black,
     fontFamily: FONTS.bold,
     fontSize: SIZE.heading,
   },
   text: {
     fontFamily: FONTS.regular,
     fontSize: SIZE.small,
-    color: COLORS.white100,
+    color: COLORS.black,
   },
   inputcontainer: {
     flex: 3,

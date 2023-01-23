@@ -15,11 +15,10 @@ const Stack = createStackNavigator();
 
 const App = () => {
   const [loaded] = useFonts({
-    PoppinsLight: require("./assets/fonts/Poppins-Light.ttf"),
-    PoppinsRegular: require("./assets/fonts/Poppins-Regular.ttf"),
-    PoppinsMedium: require("./assets/fonts/Poppins-Medium.ttf"),
-    PoppinsSemiBold: require("./assets/fonts/Poppins-SemiBold.ttf"),
-    PoppinsBold: require("./assets/fonts/Poppins-Bold.ttf"),
+    PlayfairDisplayRegular: require("./assets/fonts/PlayfairDisplay-Regular.ttf"),
+    PlayfairDisplayMedium: require("./assets/fonts/PlayfairDisplay-Medium.ttf"),
+    PlayfairDisplaySemiBold: require("./assets/fonts/PlayfairDisplay-SemiBold.ttf"),
+    PlayfairDisplayBold: require("./assets/fonts/PlayfairDisplay-Bold.ttf"),
   });
 
   if(!loaded) return null;
