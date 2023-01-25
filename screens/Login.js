@@ -30,7 +30,7 @@ const Login = () => {
           />
           <MainButton 
             name='Login' 
-            onPress={() => nav.navigate('Home')} 
+            onPress={() => nav.navigate('TabNavigator', {screen: 'Home'})} 
           />
         </View>
         <View style={styles.container}>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Text, FlatList, View, StyleSheet, ScrollView, Image } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { ViewButton, VerticalCard } from '../components';
 import { assets, COLORS, FONTS, SIZE, GoalData, HabitData } from '../constants';
 
@@ -8,7 +7,7 @@ const Home = () => {
   const [currentTime, setCurrentTime] = useState('');
   const [pressed, setPressed] = useState(1);
 
-  //Get hour of day for greeting
+  //Retrieve hour of day for greeting
   useEffect(() => {
     let hour = new Date().getHours();
     let greeting;

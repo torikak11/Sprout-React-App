@@ -25,7 +25,7 @@ const Register = () => {
           />
         </View>
         <View style={styles.buttoncontainer}>
-          <SecondaryButton name="Submit" onPress={() => nav.navigate('Home')} />
+          <SecondaryButton name="Submit" onPress={() => nav.navigate('TabNavigator', {screen: 'Home'})} />
         </View>
       </View>
       
