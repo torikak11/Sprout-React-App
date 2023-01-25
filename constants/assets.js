@@ -15,6 +15,8 @@ import lines04 from '../assets/images/lines-04.png';
 import lines05 from '../assets/images/lines-05.png';
 import logo from '../assets/images/logo.png';
 
+import earlyMorning from '../assets/images/early-morning.png';
+
 export default {
     sun,
     store,
@@ -32,4 +34,6 @@ export default {
     lines04,
     lines05,
     logo,
+
+    earlyMorning,
 };

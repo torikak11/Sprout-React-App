@@ -19,7 +19,7 @@ export const RecInput = (props) => {
             }}
           selectionColor={COLORS.black}
           inputMode='text'
-          secureTextEntry={props.label == 'Password' ? true : false}
+          secureTextEntry={props.label == 'Password' || props.label == 'Re-enter Password' ? true : false}
           onChangeText={props.onChangeText}
           value={props.value}
         />
@@ -45,10 +45,10 @@ export const CheckBoxInput = (props) => {
           onValueChange={props.setSelection}
           style={{
             color: COLORS.green200,
-            
+            borderRadius: 5,
           }}
         />
-        <Text style={{color: COLORS.green200}}>{props.text}</Text>
+        <Text style={{color: COLORS.green200, paddingLeft: 15}}>{props.text}</Text>
     </View>
     
   );

@@ -1,7 +1,8 @@
 import Logo from "./Logo";
 import { RecInput, CheckBoxInput } from "./Input";
-import { MainButton, SecondaryButton } from "./Button";
+import { MainButton, SecondaryButton, ViewButton } from "./Button";
+import { VerticalCard } from "./Card";
 
 export {
-    Logo, RecInput, MainButton, SecondaryButton, CheckBoxInput
+    Logo, RecInput, MainButton, SecondaryButton, CheckBoxInput, ViewButton, VerticalCard,
 };
