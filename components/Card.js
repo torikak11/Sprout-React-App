@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native';
 import React from 'react';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 import { COLORS, FONTS, SHADOWS, SIZE } from '../constants';
 
@@ -39,21 +40,36 @@ export const HorizontalCard = (props) => {
     return (
         <View
             style={{
-                width: 200,
-                height: 100,
                 backgroundColor: props.color,
-                //marginVertical: 7,
+                height: 120,
+                marginHorizontal: 25,
+                marginVertical: 10,
                 borderRadius: 20,
                 ...SHADOWS.shadow01,
-            }}>
+            }}
+        >
+            <View
+                style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}
+            >
                 <Text
                     style={{
                         fontFamily: FONTS.medium,
-                        fontSize: SIZE.body,
+                        fontSize: SIZE.subheading,
                         color: COLORS.white100,
-                        //marginTop: 40,
-                        //marginLeft: 7,
+                        marginLeft: 10,
+                        marginTop: 15,
                     }}>{props.name}</Text>
+                <Ionicons 
+                    name="arrow-forward" 
+                    color={COLORS.white100} 
+                    size={30}
+                    style={{
+                        marginRight: 20,
+                        marginTop: 15,
+                    }} />
+                
+            </View>
+                
         </View>
     );
 };
