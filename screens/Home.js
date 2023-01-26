@@ -24,8 +24,6 @@ const Home = () => {
     setCurrentTime(greeting);
   });
 
-  //TODO: Implement bottom tab navigator
-
   return (
     <ScrollView 
       contentContainerStyle={{

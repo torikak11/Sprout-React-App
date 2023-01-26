@@ -1,4 +1,4 @@
-import { View, TextInput, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import React from 'react';
 
 import { COLORS, FONTS, SHADOWS, SIZE } from '../constants';
@@ -30,6 +30,29 @@ export const VerticalCard = (props) => {
                         color: COLORS.white100,
                         marginTop: 40,
                         marginLeft: 7,
+                    }}>{props.name}</Text>
+        </View>
+    );
+};
+
+export const HorizontalCard = (props) => {
+    return (
+        <View
+            style={{
+                width: 200,
+                height: 100,
+                backgroundColor: props.color,
+                //marginVertical: 7,
+                borderRadius: 20,
+                ...SHADOWS.shadow01,
+            }}>
+                <Text
+                    style={{
+                        fontFamily: FONTS.medium,
+                        fontSize: SIZE.body,
+                        color: COLORS.white100,
+                        //marginTop: 40,
+                        //marginLeft: 7,
                     }}>{props.name}</Text>
         </View>
     );
