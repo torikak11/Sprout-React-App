@@ -3,6 +3,7 @@ import React from 'react';
 import { COLORS, FONTS, GoalData, SIZE } from '../constants';
 import { HorizontalCard } from '../components';
 
+
 const Goals = () => {
 
   return (

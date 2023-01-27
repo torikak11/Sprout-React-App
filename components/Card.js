@@ -1,5 +1,6 @@
-import { View, Text, Pressable } from 'react-native';
 import React from 'react';
+import { View, Text, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 import { COLORS, FONTS, SHADOWS, SIZE } from '../constants';
@@ -37,6 +38,8 @@ export const VerticalCard = (props) => {
 };
 
 export const HorizontalCard = (props) => {
+    const nav = useNavigation();
+
     return (
         <Pressable
             style={{
@@ -47,6 +50,7 @@ export const HorizontalCard = (props) => {
                 borderRadius: 20,
                 ...SHADOWS.shadow01,
             }}
+            onPress={() => nav.navigate('GoalStackNavigator', {screen: 'Goal Overview'})}
         >
             <View
                 style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}
@@ -68,8 +72,7 @@ export const HorizontalCard = (props) => {
                         marginTop: 15,
                     }} />
                 
-            </View>
-                
+            </View>     
         </Pressable>
     );
 };
