@@ -8,6 +8,7 @@ import Store from '../screens/Store';
 import New from '../screens/New';
 import Goals from '../screens/Goals';
 import Habits from '../screens/Habits';
+import GoalStackNavigator from './GoalStackNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -47,12 +48,12 @@ const TabNavigator = () => {
           }}/>
         <Tab.Screen 
           name='Goals' 
-            component={Goals} 
-            options={{
-              tabBarIcon: ({color, size}) => (
-                <Ionicons name="rose" color={color} size={size} />
-              ),
-            }}/>
+          component={GoalStackNavigator} 
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <Ionicons name="rose" color={color} size={size} />
+            ),
+          }}/>
         <Tab.Screen 
           name='Habits' 
           component={Habits} 

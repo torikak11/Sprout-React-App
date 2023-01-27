@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -38,12 +38,12 @@ export const VerticalCard = (props) => {
 
 export const HorizontalCard = (props) => {
     return (
-        <View
+        <Pressable
             style={{
                 backgroundColor: props.color,
                 height: 120,
                 marginHorizontal: 25,
-                marginVertical: 10,
+                marginVertical: 12,
                 borderRadius: 20,
                 ...SHADOWS.shadow01,
             }}
@@ -70,6 +70,6 @@ export const HorizontalCard = (props) => {
                 
             </View>
                 
-        </View>
+        </Pressable>
     );
 };
