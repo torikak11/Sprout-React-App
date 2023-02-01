@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, Pressable, TouchableOpacity } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/native';
 
 import { COLORS, FONTS, SHADOWS, SIZE } from '../constants';
 
@@ -41,7 +41,8 @@ export const HorizontalCard = (props) => {
     const nav = useNavigation();
 
     return (
-        <Pressable
+        <TouchableOpacity
+            onPress={() => nav.navigate('Goals', {screen: 'Goal Overview'})}
             style={{
                 backgroundColor: props.color,
                 height: 120,
@@ -50,7 +51,6 @@ export const HorizontalCard = (props) => {
                 borderRadius: 20,
                 ...SHADOWS.shadow01,
             }}
-            onPress={() => nav.navigate('GoalStackNavigator', {screen: 'Goal Overview'})}
         >
             <View
                 style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}
@@ -73,6 +73,6 @@ export const HorizontalCard = (props) => {
                     }} />
                 
             </View>     
-        </Pressable>
+        </TouchableOpacity>
     );
 };

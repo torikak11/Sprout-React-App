@@ -72,11 +72,6 @@ const styles = StyleSheet.create({
   backcolor: {
     flex: 3,
   },
-  lines: {
-    flex: 1,
-    height: 300,
-    width: 300,
-  },
   headercontainer: {
     flex: 1,
   },

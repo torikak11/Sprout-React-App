@@ -10,7 +10,6 @@ import TabNavigator from './navigator/TabNavigator';
 
 
 //Screen renderings
-
 const Stack = createStackNavigator();
 
 const App = () => {

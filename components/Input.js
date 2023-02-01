@@ -1,10 +1,13 @@
-import { View, TextInput, Text } from 'react-native';
+import { View, TextInput, Text, Pressable } from 'react-native';
 import Checkbox from 'expo-checkbox';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
 
 import { COLORS, FONTS, SHADOWS, SIZE } from '../constants';
 
 export const RecInput = (props) => {
+
+
   return (
     <View>
         <TextInput 
@@ -40,15 +43,15 @@ export const RecInput = (props) => {
 export const CheckBoxInput = (props) => {
   return (
     <View style={{flexDirection: 'row'}}>
-        <Checkbox 
-          value={props.isSelected}
-          onValueChange={props.setSelection}
-          style={{
-            color: COLORS.green200,
-            borderRadius: 5,
-          }}
-        />
-        <Text style={{color: COLORS.green200, paddingLeft: 15}}>{props.text}</Text>
+        <Pressable>
+          <Ionicons 
+            name={props.isSelected ? "checkbox-outline" : "square-outline"}
+            color={COLORS.white100} 
+            size={30} 
+          />
+        </Pressable>
+        <Text style={{fontSize: SIZE.body, color: COLORS.white100, paddingLeft: 15, paddingTop: 7,}}
+        >{props.text}</Text>
     </View>
     
   );
