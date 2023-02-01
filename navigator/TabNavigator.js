@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 const TabBarAddButton = ({children, onPress}) => (
   <TouchableOpacity
     style={{
-      top: -25,
+      top: -20,
       justifyContent: 'center',
       alignItems: 'center',
       ...SHADOWS.shadow01,
@@ -47,6 +47,7 @@ const TabNavigator = () => {
           //tabBarInactiveTintColor: COLORS.white100,
           tabBarStyle: { 
             position: 'absolute',
+            bottom: 0,
             backgroundColor: COLORS.green200, 
             borderTopLeftRadius: 15, 
             borderTopRightRadius: 15,
@@ -59,7 +60,7 @@ const TabNavigator = () => {
           component={Home} 
           options={{
             tabBarIcon: ({focused}) => (
-              <View>
+              <View style={{justifyContent: 'center', alignItems: 'center', top: 10,}}>
                 <Ionicons name="home" color={focused ? COLORS.white100 : COLORS.black} size={30} />
                 <Text
                   style={{color: focused ? COLORS.white100 : COLORS.black, fontSize: SIZE.span}}>
@@ -73,7 +74,7 @@ const TabNavigator = () => {
           component={Store} 
           options={{
             tabBarIcon: ({focused}) => (
-              <View>
+              <View style={{justifyContent: 'center', alignItems: 'center', top: 10,}}>
                 <Ionicons name="pricetag" color={focused ? COLORS.white100 : COLORS.black} size={30} />
                 <Text
                   style={{color: focused ? COLORS.white100 : COLORS.black, fontSize: SIZE.span}}>
@@ -98,7 +99,7 @@ const TabNavigator = () => {
           component={GoalStackNavigator} 
           options={{
             tabBarIcon: ({focused}) => (
-              <View>
+              <View style={{justifyContent: 'center', alignItems: 'center', top: 10,}}>
                 <Ionicons name="rose" color={focused ? COLORS.white100 : COLORS.black} size={30} />
                 <Text
                   style={{color: focused ? COLORS.white100 : COLORS.black, fontSize: SIZE.span}}>
@@ -112,7 +113,7 @@ const TabNavigator = () => {
           component={Habits} 
           options={{
             tabBarIcon: ({focused}) => (
-              <View>
+              <View style={{justifyContent: 'center', alignItems: 'center', top: 10,}}>
                 <Ionicons name="leaf" color={focused ? COLORS.white100 : COLORS.black} size={30} />
                 <Text
                   style={{color: focused ? COLORS.white100 : COLORS.black, fontSize: SIZE.span}}>
