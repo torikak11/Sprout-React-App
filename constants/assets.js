@@ -7,6 +7,7 @@ import home from '../assets/icons/home.svg';
 import forwardArrow from '../assets/icons/forward-arrow.png';
 import downwardsArrow from '../assets/icons/downwards-arrow.png';
 import backArrow from '../assets/icons/back-arrow.png';
+import edit from '../assets/icons/edit.png';
 
 import lines01 from '../assets/images/lines-01.png';
 import lines02 from '../assets/images/lines-02.png';
@@ -27,6 +28,7 @@ export default {
     forwardArrow,
     downwardsArrow,
     backArrow,
+    edit,
 
     lines01,
     lines02,
